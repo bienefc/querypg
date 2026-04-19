@@ -1,0 +1,66 @@
+{
+  "id": "ecommerce",
+  "label": "E-Commerce Store",
+  "tables": {
+    "users": [
+      { "id": 1, "name": "Alice Chen",  "email": "alice@example.com",  "country": "US", "joined_at": "2023-01-15" },
+      { "id": 2, "name": "Bob Torres",  "email": "bob@example.com",    "country": "MX", "joined_at": "2023-03-22" },
+      { "id": 3, "name": "Chloe Kim",   "email": "chloe@example.com",  "country": "KR", "joined_at": "2023-06-10" },
+      { "id": 4, "name": "David Osei",  "email": "david@example.com",  "country": "GH", "joined_at": "2024-01-05" },
+      { "id": 5, "name": "Eva Novak",   "email": "eva@example.com",    "country": "CZ", "joined_at": "2024-02-18" }
+    ],
+    "products": [
+      { "id": 1, "name": "Laptop Pro",    "category": "Electronics", "price": 1299.99, "stock": 45 },
+      { "id": 2, "name": "Desk Chair",    "category": "Furniture",   "price": 349.50,  "stock": 120 },
+      { "id": 3, "name": "Coffee Beans",  "category": "Food",        "price": 24.99,   "stock": 500 },
+      { "id": 4, "name": "Noise Headset", "category": "Electronics", "price": 199.00,  "stock": 80 },
+      { "id": 5, "name": "Standing Desk", "category": "Furniture",   "price": 599.00,  "stock": 30 }
+    ],
+    "orders": [
+      { "id": 1, "user_id": 1, "product_id": 1, "quantity": 1, "total": 1299.99, "status": "delivered", "ordered_at": "2024-01-20" },
+      { "id": 2, "user_id": 1, "product_id": 3, "quantity": 3, "total": 74.97,   "status": "delivered", "ordered_at": "2024-02-01" },
+      { "id": 3, "user_id": 2, "product_id": 2, "quantity": 1, "total": 349.50,  "status": "shipped",   "ordered_at": "2024-03-05" },
+      { "id": 4, "user_id": 3, "product_id": 4, "quantity": 2, "total": 398.00,  "status": "pending",   "ordered_at": "2024-03-10" },
+      { "id": 5, "user_id": 4, "product_id": 5, "quantity": 1, "total": 599.00,  "status": "delivered", "ordered_at": "2024-03-15" },
+      { "id": 6, "user_id": 1, "product_id": 4, "quantity": 1, "total": 199.00,  "status": "cancelled", "ordered_at": "2024-03-20" },
+      { "id": 7, "user_id": 5, "product_id": 3, "quantity": 5, "total": 124.95,  "status": "delivered", "ordered_at": "2024-04-01" }
+    ]
+  },
+  "schema": [
+    {
+      "name": "users",
+      "rowCount": 5,
+      "columns": [
+        { "name": "id",        "type": "integer" },
+        { "name": "name",      "type": "text" },
+        { "name": "email",     "type": "text" },
+        { "name": "country",   "type": "text" },
+        { "name": "joined_at", "type": "date" }
+      ]
+    },
+    {
+      "name": "products",
+      "rowCount": 5,
+      "columns": [
+        { "name": "id",       "type": "integer" },
+        { "name": "name",     "type": "text" },
+        { "name": "category", "type": "text" },
+        { "name": "price",    "type": "real" },
+        { "name": "stock",    "type": "integer" }
+      ]
+    },
+    {
+      "name": "orders",
+      "rowCount": 7,
+      "columns": [
+        { "name": "id",         "type": "integer" },
+        { "name": "user_id",    "type": "integer" },
+        { "name": "product_id", "type": "integer" },
+        { "name": "quantity",   "type": "integer" },
+        { "name": "total",      "type": "real" },
+        { "name": "status",     "type": "text" },
+        { "name": "ordered_at", "type": "date" }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,59 @@
+{
+  "id": "hr",
+  "label": "HR / Employees",
+  "tables": {
+    "employees": [
+      { "id": 1, "name": "Sarah Miller",   "department_id": 1, "salary": 95000, "hire_date": "2020-03-15", "manager_id": null },
+      { "id": 2, "name": "James Wilson",   "department_id": 2, "salary": 72000, "hire_date": "2019-07-01", "manager_id": 1 },
+      { "id": 3, "name": "Priya Sharma",   "department_id": 1, "salary": 88000, "hire_date": "2021-01-20", "manager_id": 1 },
+      { "id": 4, "name": "Carlos Mendez",  "department_id": 3, "salary": 65000, "hire_date": "2022-05-10", "manager_id": 2 },
+      { "id": 5, "name": "Yuki Tanaka",    "department_id": 2, "salary": 78000, "hire_date": "2020-11-30", "manager_id": 2 },
+      { "id": 6, "name": "Amara Diallo",   "department_id": 3, "salary": 61000, "hire_date": "2023-02-14", "manager_id": 2 }
+    ],
+    "departments": [
+      { "id": 1, "name": "Engineering",  "location": "San Francisco" },
+      { "id": 2, "name": "Marketing",    "location": "New York" },
+      { "id": 3, "name": "Support",      "location": "Austin" }
+    ],
+    "salaries": [
+      { "employee_id": 1, "amount": 95000, "effective_date": "2024-01-01" },
+      { "employee_id": 2, "amount": 72000, "effective_date": "2024-01-01" },
+      { "employee_id": 3, "amount": 88000, "effective_date": "2024-01-01" },
+      { "employee_id": 4, "amount": 65000, "effective_date": "2024-01-01" },
+      { "employee_id": 5, "amount": 78000, "effective_date": "2024-01-01" },
+      { "employee_id": 6, "amount": 61000, "effective_date": "2024-01-01" }
+    ]
+  },
+  "schema": [
+    {
+      "name": "employees",
+      "rowCount": 6,
+      "columns": [
+        { "name": "id",            "type": "integer" },
+        { "name": "name",          "type": "text" },
+        { "name": "department_id", "type": "integer" },
+        { "name": "salary",        "type": "integer" },
+        { "name": "hire_date",     "type": "date" },
+        { "name": "manager_id",    "type": "integer" }
+      ]
+    },
+    {
+      "name": "departments",
+      "rowCount": 3,
+      "columns": [
+        { "name": "id",       "type": "integer" },
+        { "name": "name",     "type": "text" },
+        { "name": "location", "type": "text" }
+      ]
+    },
+    {
+      "name": "salaries",
+      "rowCount": 6,
+      "columns": [
+        { "name": "employee_id",     "type": "integer" },
+        { "name": "amount",          "type": "integer" },
+        { "name": "effective_date",  "type": "date" }
+      ]
+    }
+  ]
+}
